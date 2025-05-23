@@ -24,7 +24,7 @@ The framework enhances learning through two novel training-time strategies that 
 Extensive experiments on ImageNet 256×256 demonstrate up to **2×** speedup with minimal quality degradation, surpassing state-of-the-art dynamic and speculative inference baselines.
 
 <p align="center">
-  <img src="Figures/speedup_vs_fid.png" width="500"/>
+  <img src="Figures/speedup_vs_fid.png" width="480"/>
 </p>
 <p align="center"><em>FreqExit achieves superior speed–quality trade-off compared to baseline methods.</em></p>
 
@@ -45,6 +45,8 @@ Frequency-Gated Self-Reconstruction: Adds an auxiliary loss branch with learnabl
 To get started, clone the repository and install the required dependencies:
 
 ```bash
+conda create -n FreqExit python=3.10 -y
+conda activate FreqExi
 cd FreqExit
 pip install -r requirements.txt
 ```
