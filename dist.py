@@ -32,7 +32,6 @@ def initialize(fork=False, backend='nccl', gpu_id_if_not_distibuted=0, timeout=3
     local_rank = global_rank % num_gpus
     torch.cuda.set_device(local_rank)
     
-    # ref: https://github.com/open-mmlab/mmcv/blob/master/mmcv/runner/dist_utils.py#L29
     if mp.get_start_method(allow_none=True) is None:
         method = 'fork' if fork else 'spawn'
         print(f'[dist initialize] mp method={method}')
