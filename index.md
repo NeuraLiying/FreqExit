@@ -32,6 +32,8 @@ permalink: "/"
   .section h2{margin-top:22px}
   .center{ text-align:center;}
   img.hero{max-width:760px; width:100%; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.08);}
+  .logos{display:flex; justify-content:center; align-items:center; gap:36px; margin:22px 0 30px;}
+  .logos img{height:70px; width:auto;}
 </style>
 
 <div class="wrap">
@@ -42,18 +44,24 @@ permalink: "/"
   <div class="authors">
     <a>Ying Li</a><sup>1</sup>,
     <a>Chengfei Lv</a><sup>2</sup>,
-    <a>Huan Wang</a><sup>1,3</sup>
+    <a>Huan Wang</a><sup>1</sup>
   </div>
 
   <div class="affils">
     <sup>1</sup> Westlake University &nbsp;&nbsp;·&nbsp;&nbsp;
-    <sup>2</sup> Alibaba Group &nbsp;&nbsp;·&nbsp;&nbsp;
-    <sup>3</sup> Westlake University
+    <sup>2</sup> Alibaba Group
+  </div>
+
+  <div class="center" style="margin-top:6px;">
+    <em>*Corresponding author: wanghuan [at] westlake [dot] edu [dot] cn</em>
+  </div>
+
+  <div class="logos">
+    <img src="Figures/westlake.png" alt="Westlake University logo">
+    <img src="Figures/Alibaba-group.png" alt="Alibaba Group logo">
   </div>
 
   <div class="badges">
-    <!-- 需要时解开 Paper/ArXiv；当前仅 Webpage=本页、Code、License -->
-    <!-- <a class="badge" href="https://arxiv.org/abs/xxxx.xxxxx">ArXiv</a> -->
     <a class="badge blue" href="https://github.com/NeuraLiying/FreqExit">Code</a>
     <a class="badge gold" href="https://opensource.org/license/apache-2-0">Apache&nbsp;2.0</a>
   </div>
@@ -84,3 +92,4 @@ permalink: "/"
     booktitle={NeurIPS},
     year={2025}
   }
+</div>
