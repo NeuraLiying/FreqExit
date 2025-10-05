@@ -28,12 +28,13 @@ permalink: "/"
   }
   .badge.blue{ background:var(--accent);}
   .badge.gold{ background:var(--gold); color:#1f2328;}
-  .section{max-width:var(--maxw); margin:28px auto 0; }
-  .section h2{margin-top:22px}
   .center{ text-align:center;}
-  img.hero{max-width:760px; width:100%; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.08);}
+  /* 缩小 teaser 图：*/
+  img.hero{max-width:560px; width:100%; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.08);}
   .logos{display:flex; justify-content:center; align-items:center; gap:36px; margin:22px 0 30px;}
   .logos img{height:70px; width:auto;}
+  /* 让被 HTML 包裹的块内也能解析 Markdown：*/
+  .section{max-width:var(--maxw); margin:28px auto 0;}
 </style>
 
 <div class="wrap">
@@ -71,17 +72,26 @@ permalink: "/"
     <p><em>FreqExit bridges step-wise generation and early-exit acceleration, achieving up to <strong>2×</strong> speedup with negligible quality degradation.</em></p>
   </div>
 
+  <!-- 下面这些 section 使用 markdown="1"，使 ## 标题/粗体等能被解析 -->
+  <div class="section" markdown="1">
+
   ## Abstract
   FreqExit is a dynamic inference framework for Visual AutoRegressive (VAR) models, which decode from coarse structures to fine details. Existing methods fail on VAR due to the absence of semantic stability and smooth representation transitions. FreqExit addresses this by recognizing that high-frequency details essential to visual quality tend to emerge in later decoding stages. On ImageNet 256×256, FreqExit achieves up to **2×** speedup with only minor degradation, and delivers **1.3×** acceleration without perceptible quality loss. This enables runtime-adaptive acceleration within a unified model, offering a favorable trade-off between efficiency and fidelity for practical and flexible deployment.
 
-  ## Results (Teaser)
-  <p class="center"><img class="hero" src="Figures/speedup_vs_fid.png" alt="Speed–quality trade-off"></p>
+  ## Overview of our FreqExit method
+  <!-- TODO: add method overview text/figure here -->
+
+  ## Main Results
+  <!-- TODO: add main results table/figures here -->
+
+  ## More Visualizations
+  <!-- TODO: add more qualitative results here -->
 
   ## Acknowledgement
   This work builds upon the foundations of prior open-source efforts,
-  including <a href="https://github.com/FoundationVision/VAR">VAR</a>,
-  <a href="https://github.com/czg1225/CoDe">CoDe</a>, and
-  <a href="https://github.com/facebookresearch/LayerSkip">LayerSkip</a>.
+  including [VAR](https://github.com/FoundationVision/VAR),
+  [CoDe](https://github.com/czg1225/CoDe), and
+  [LayerSkip](https://github.com/facebookresearch/LayerSkip).
   We sincerely thank the authors for their excellent contributions to the research community.
 
   ## BibTeX
@@ -92,4 +102,6 @@ permalink: "/"
     booktitle={NeurIPS},
     year={2025}
   }
-</div>
+  </div> <!-- /section markdown -->
+</div> <!-- /wrap -->
+```
