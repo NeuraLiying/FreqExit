@@ -29,6 +29,27 @@ permalink: "/"
   .badge.blue{ background:var(--accent);}
   .badge.gold{ background:var(--gold); color:#1f2328;}
   .center{ text-align:center;}
+  .section{
+    max-width: var(--maxw);
+    margin: 28px auto 0;
+    padding: 0 4px;
+  }
+  .logos{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:32px;              
+    margin:20px 0 28px;
+  }
+  .logos img{
+    height:64px;          
+    width:auto;            
+    object-fit:contain;    
+    max-width:220px;       
+  }
+  @media (max-width:480px){
+    .logos img{ height:52px; }  /* 移动端再小一点 */
+  }
 
   img.hero{
     max-width:420px;  
