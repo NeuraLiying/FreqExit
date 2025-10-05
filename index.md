@@ -29,11 +29,13 @@ permalink: "/"
   .badge.blue{ background:var(--accent);}
   .badge.gold{ background:var(--gold); color:#1f2328;}
   .center{ text-align:center;}
-  /* ✅ 缩小 teaser 图：*/
-  img.hero{max-width:560px; width:100%; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.08);}
-  .logos{display:flex; justify-content:center; align-items:center; gap:36px; margin:22px 0 30px;}
-  .logos img{height:70px; width:auto;}
-  .section{max-width:var(--maxw); margin:28px auto 0;}
+
+  img.hero{
+    max-width:420px;  /* ← 原来是 560px */
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+  }
 </style>
 
 <div class="wrap">
