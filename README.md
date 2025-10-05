@@ -14,12 +14,13 @@
 ---
 
 <p align="center">
-  <!-- 块状按钮风格 -->
+  <!-- Webpage -->
   <a href="https://neuraliying.github.io/FreqExit">
-    <img alt="Webpage" src="https://img.shields.io/badge/Webpage-visit-1f6feb?style=for-the-badge">
+    <img alt="Webpage" src="https://badgen.net/badge/Webpage/Visit/1f6feb?labelColor=2f363d&scale=1.2">
   </a>
+  <!-- License -->
   <a href="https://opensource.org/license/apache-2-0">
-    <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-d4a72c?style=for-the-badge">
+    <img alt="License" src="https://badgen.net/badge/License/Apache%202.0/d4a72c?labelColor=2f363d&scale=1.2">
   </a>
 </p>
 
