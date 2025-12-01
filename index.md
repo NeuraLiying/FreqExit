@@ -48,7 +48,7 @@ permalink: "/"
     max-width:220px;       
   }
   @media (max-width:480px){
-    .logos img{ height:52px; }  /* 移动端再小一点 */
+    .logos img{ height:52px; }  
   }
 
   img.hero{
@@ -56,6 +56,41 @@ permalink: "/"
     width:100%;
     border-radius:10px;
     box-shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+
+ 
+  .carousel{
+    position:relative;
+    overflow:hidden;
+    max-width:var(--maxw);
+    margin:12px auto 0;
+    border-radius:10px;
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+  }
+  .carousel-track{
+    display:flex;
+    transition:transform .6s ease;
+  }
+  .carousel img{
+    width:100%;
+    flex:0 0 100%;
+    display:block;
+  }
+  .carousel-dots{
+    text-align:center;
+    margin-top:8px;
+  }
+  .carousel-dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:999px;
+    background:#d0d7de;
+    margin:0 4px;
+    cursor:pointer;
+  }
+  .carousel-dot.active{
+    background:var(--accent);
   }
 </style>
 
@@ -108,19 +143,42 @@ permalink: "/"
     </p>
   </div>
 
+  
   <div class="section">
     <h2>Overview of our FreqExit method</h2>
-    <p><!-- TODO: add method overview text/figure here --></p>
+    <div class="center">
+      <img class="hero" src="Figures/method.png" alt="Overview of the FreqExit method">
+    </div>
   </div>
 
+ 
   <div class="section">
     <h2>Main Results</h2>
-    <p><!-- TODO: add main results table/figures here --></p>
+    <div class="carousel" data-interval="5000">
+      <div class="carousel-track">
+        <img src="Figures/exp_1.png" alt="Main results figure 1">
+        <img src="Figures/exp_2.png" alt="Main results figure 2">
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="carousel-dot active"></span>
+      <span class="carousel-dot"></span>
+    </div>
   </div>
 
+ 
   <div class="section">
     <h2>More Visualizations</h2>
-    <p><!-- TODO: add more qualitative results here --></p>
+    <div class="carousel" data-interval="5000">
+      <div class="carousel-track">
+        <img src="Figures/supplementary_generation.png" alt="Additional FreqExit generation results">
+        <img src="Figures/supplementary_inpaint.png" alt="Additional FreqExit inpainting results">
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="carousel-dot active"></span>
+      <span class="carousel-dot"></span>
+    </div>
   </div>
 
   <div class="section">
@@ -145,3 +203,41 @@ permalink: "/"
   </div>
 
 </div> <!-- /wrap -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach(function (carousel, idx) {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const dotsContainer = carousel.parentElement.querySelector('.carousel-dots');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+    let currentIndex = 0;
+    const interval = parseInt(carousel.dataset.interval || '5000', 10);
+
+    function showSlide(i) {
+      if (!slides.length) return;
+      currentIndex = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+      dots.forEach(function (dot, k) {
+        dot.classList.toggle('active', k === currentIndex);
+      });
+    }
+
+   
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        showSlide(i);
+      });
+    });
+
+    
+    showSlide(0);
+    setInterval(function () {
+      showSlide(currentIndex + 1);
+    }, interval);
+  });
+});
+</script>
