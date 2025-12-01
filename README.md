@@ -13,11 +13,16 @@
 
 ---
 
-## 📎 Links
-| Item | Link |
-|------|------|
-| 🌐 Webpage | [https://neuraliying.github.io/FreqExit](https://neuraliying.github.io/FreqExit) |
-| ⚖️ License | [Apache License 2.0](https://opensource.org/license/apache-2-0) |
+<p align="center">
+  <!-- Webpage -->
+  <a href="https://neuraliying.github.io/FreqExit">
+    <img alt="Webpage" src="https://img.shields.io/badge/Webpage-visit-blue?style=for-the-badge">
+  </a>
+  <!-- Code License -->
+  <a href="https://opensource.org/license/apache-2-0">
+    <img alt="License" src="https://img.shields.io/badge/Code%20License-Apache%202.0-yellow?style=for-the-badge">
+  </a>
+</p>
 
 ---
 
