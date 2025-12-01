@@ -1,6 +1,25 @@
-📝 This repository accompanies a NeurIPS 2025 submission
+
 
 # FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance
+
+📝 This repository accompanies our **NeurIPS 2025** paper.
+
+---
+
+## 🔥🔥🔥 News
+
+- **2025-10-05**: **Repo** and **webpage** are released.  
+- **2025-09-20**: **FreqExit** has been **accepted by NeurIPS'25** 🎉
+
+---
+
+## 📎 Links
+| Item | Link |
+|------|------|
+| 🌐 Webpage | [https://neuraliying.github.io/FreqExit](https://neuraliying.github.io/FreqExit) |
+| ⚖️ License | [Apache License 2.0](https://opensource.org/license/apache-2-0) |
+
+---
 
 ## 🧠 Abstract
 
@@ -104,8 +123,14 @@ FreqExit also shows strong generalization in a zero-shot inpainting setting with
 </p>
 <p align="center"><em>Visual examples of FreqExit reconstructing masked regions with semantically coherent details.</em></p>
 
+---
 
 
+## 🙏 Acknowledgement
+
+This work builds upon the foundations of prior open-source efforts,  
+including [VAR](https://github.com/FoundationVision/VAR), [CoDe](https://github.com/czg1225/CoDe), and [LayerSkip](https://github.com/facebookresearch/LayerSkip).  
+We sincerely thank the authors for their excellent contributions to the research community.
 
 
 
