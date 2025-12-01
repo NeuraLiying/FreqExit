@@ -29,11 +29,10 @@ permalink: "/"
   .badge.blue{ background:var(--accent);}
   .badge.gold{ background:var(--gold); color:#1f2328;}
   .center{ text-align:center;}
-  /* 缩小 teaser 图：*/
+  /* ✅ 缩小 teaser 图：*/
   img.hero{max-width:560px; width:100%; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.08);}
   .logos{display:flex; justify-content:center; align-items:center; gap:36px; margin:22px 0 30px;}
   .logos img{height:70px; width:auto;}
-  /* 让被 HTML 包裹的块内也能解析 Markdown：*/
   .section{max-width:var(--maxw); margin:28px auto 0;}
 </style>
 
@@ -72,36 +71,54 @@ permalink: "/"
     <p><em>FreqExit bridges step-wise generation and early-exit acceleration, achieving up to <strong>2×</strong> speedup with negligible quality degradation.</em></p>
   </div>
 
-  <!-- 下面这些 section 使用 markdown="1"，使 ## 标题/粗体等能被解析 -->
-  <div class="section" markdown="1">
+  <!-- ===== Sections written in pure HTML so they always render correctly ===== -->
+  <div class="section">
+    <h2>Abstract</h2>
+    <p>
+      FreqExit is a dynamic inference framework for Visual AutoRegressive (VAR) models, which decode from coarse
+      structures to fine details. Existing methods fail on VAR due to the absence of semantic stability and smooth
+      representation transitions. FreqExit addresses this by recognizing that high-frequency details essential to
+      visual quality tend to emerge in later decoding stages. On ImageNet 256×256, FreqExit achieves up to
+      <b>2×</b> speedup with only minor degradation, and delivers <b>1.3×</b> acceleration without perceptible quality
+      loss. This enables runtime-adaptive acceleration within a unified model, offering a favorable trade-off between
+      efficiency and fidelity for practical and flexible deployment.
+    </p>
+  </div>
 
-  ## Abstract
-  FreqExit is a dynamic inference framework for Visual AutoRegressive (VAR) models, which decode from coarse structures to fine details. Existing methods fail on VAR due to the absence of semantic stability and smooth representation transitions. FreqExit addresses this by recognizing that high-frequency details essential to visual quality tend to emerge in later decoding stages. On ImageNet 256×256, FreqExit achieves up to **2×** speedup with only minor degradation, and delivers **1.3×** acceleration without perceptible quality loss. This enables runtime-adaptive acceleration within a unified model, offering a favorable trade-off between efficiency and fidelity for practical and flexible deployment.
+  <div class="section">
+    <h2>Overview of our FreqExit method</h2>
+    <p><!-- TODO: add method overview text/figure here --></p>
+  </div>
 
-  ## Overview of our FreqExit method
-  <!-- TODO: add method overview text/figure here -->
+  <div class="section">
+    <h2>Main Results</h2>
+    <p><!-- TODO: add main results table/figures here --></p>
+  </div>
 
-  ## Main Results
-  <!-- TODO: add main results table/figures here -->
+  <div class="section">
+    <h2>More Visualizations</h2>
+    <p><!-- TODO: add more qualitative results here --></p>
+  </div>
 
-  ## More Visualizations
-  <!-- TODO: add more qualitative results here -->
+  <div class="section">
+    <h2>Acknowledgement</h2>
+    <p>
+      This work builds upon the foundations of prior open-source efforts,
+      including <a href="https://github.com/FoundationVision/VAR">VAR</a>,
+      <a href="https://github.com/czg1225/CoDe">CoDe</a>, and
+      <a href="https://github.com/facebookresearch/LayerSkip">LayerSkip</a>.
+      We sincerely thank the authors for their excellent contributions to the research community.
+    </p>
+  </div>
 
-  ## Acknowledgement
-  This work builds upon the foundations of prior open-source efforts,
-  including [VAR](https://github.com/FoundationVision/VAR),
-  [CoDe](https://github.com/czg1225/CoDe), and
-  [LayerSkip](https://github.com/facebookresearch/LayerSkip).
-  We sincerely thank the authors for their excellent contributions to the research community.
+  <div class="section">
+    <h2>BibTeX</h2>
+    <pre><code class="language-bibtex">@inproceedings{li2025freqexit,
+  title={FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance},
+  author={Li, Ying and Lv, Chengfei and Wang, Huan},
+  booktitle={NeurIPS},
+  year={2025}
+}</code></pre>
+  </div>
 
-  ## BibTeX
-  ```bibtex
-  @inproceedings{li2025freqexit,
-    title={FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance},
-    author={Li, Ying and Lv, Chengfei and Wang, Huan},
-    booktitle={NeurIPS},
-    year={2025}
-  }
-  </div> <!-- /section markdown -->
 </div> <!-- /wrap -->
-```
