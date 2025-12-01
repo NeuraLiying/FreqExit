@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance
-permalink: /
+title: "FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance"
+permalink: "/"
 ---
 
 <!-- ===== Fonts & minimal style (works on GitHub Pages) ===== -->
