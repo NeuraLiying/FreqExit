@@ -15,7 +15,7 @@ FreqExit is a dynamic inference framework for Visual AutoRegressive (VAR) models
 
 ## ✨ What's New?
 
-**FreqExit** is the first dynamic inference framework designed specifically for next-scale visual autoregressive (VAR) models. It introduces a frequency-aware training paradigm that bridges the gap between step-wise generation and early-exit acceleration, enabling runtime-adaptive inference without architectural changes.
+FreqExit is the **first early-exit-based method** for dynamic inference, specifically designed for next-scale visual autoregressive (VAR) models. It introduces a frequency-aware training paradigm that bridges the gap between step-wise generation and early-exit acceleration, enabling runtime-adaptive inference without architectural changes.
 
 The framework enhances learning through two novel training-time strategies that improve feature stability and spectral quality, all without adding inference-time overhead.
 
@@ -26,7 +26,7 @@ Extensive experiments on ImageNet 256×256 demonstrate up to **2×** speedup wit
 <p align="center">
   <img src="Figures/speedup_vs_fid.png" width="500"/>
 </p>
-<p align="center"><em>FreqExit achieves superior speed–quality trade-off compared to baseline dynamic inference methods.</em></p>
+<p align="center"><em>FreqExit achieves superior speed–quality trade-off compared to baseline methods.</em></p>
 
 
 
