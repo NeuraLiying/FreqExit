@@ -8,7 +8,7 @@
 
 ## 🔥🔥🔥 News
 
-- **2025-10-05**: **Repo** and **webpage** are released.  
+- **2025-12-01**: **Repo** and **webpage** are released.  
 - **2025-09-20**: **FreqExit** has been **accepted by NeurIPS'25** 🎉
 
 ---
