@@ -11,7 +11,7 @@ FreqExit is a dynamic inference framework for Visual AutoRegressive (VAR) models
 <p align="center">
   <img src="Figures/supplementary_generation.png" width="600"/>
 </p>
-<p align="center"><em>FreqExit bridges step-wise generation and early-exit acceleration, achieving up to <strong>2×</strong> speedup with minimal quality loss.</em></p>
+<p align="center"><em>FreqExit bridges step-wise generation and early-exit acceleration, achieving up to <strong>2×</strong> speedup with negligible quality degradation.</em></p>
 
 ## ✨ What's New?
 
@@ -26,7 +26,7 @@ Extensive experiments on ImageNet 256×256 demonstrate up to **2×** speedup wit
 <p align="center">
   <img src="Figures/speedup_vs_fid.png" width="500"/>
 </p>
-<p align="center"><em>Figure: FreqExit achieves superior speed–quality trade-off compared to baseline dynamic inference methods.</em></p>
+<p align="center"><em>FreqExit achieves superior speed–quality trade-off compared to baseline dynamic inference methods.</em></p>
 
 
 
@@ -89,7 +89,7 @@ We evaluate FreqExit on ImageNet 256×256 against state-of-the-art dynamic infer
 <p align="center">
   <img src="Figures/Experimental results.png" width="750"/>
 </p>
-<p align="center"><em>Table 1: FreqExit outperforms prior methods in both perceptual quality and runtime efficiency.</em></p>
+<p align="center"><em>FreqExit outperforms prior methods in both perceptual quality and runtime efficiency.</em></p>
 
 ---
 
