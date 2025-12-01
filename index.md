@@ -12,19 +12,56 @@ permalink: "/"
     --text:#1f2328; --muted:#57606a; --accent:#1f6feb; --pill:#2f363d; --gold:#d4a72c;
     --maxw:1100px;
   }
-  body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:24px 16px 48px;}
-  .title{font-size:44px; font-weight:800; line-height:1.15; text-align:center; color:var(--text); margin:18px 0 8px;}
-  .venue{font-size:22px; font-weight:700; color:#d12; text-align:center; margin:4px 0 18px;}
-  .authors,.affils{ text-align:center; color:var(--muted); }
-  .authors a{ color:#0969da; text-decoration:none; }
-  .authors a:hover{ text-decoration:underline; }
+  body{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:24px 16px 48px;
+  }
+  .title{
+    font-size:44px;
+    font-weight:800;
+    line-height:1.15;
+    text-align:center;
+    color:var(--text);
+    margin:18px 0 8px;
+  }
+  .venue{
+    font-size:22px;
+    font-weight:700;
+    color:#d12;
+    text-align:center;
+    margin:4px 0 18px;
+  }
+  .authors,.affils{
+    text-align:center;
+    color:var(--muted);
+  }
+  .authors a{
+    color:#0969da;
+    text-decoration:none;
+  }
+  .authors a:hover{
+    text-decoration:underline;
+  }
   sup{font-size:.75em}
-  .badges{ text-align:center; margin:26px 0 20px;}
+  .badges{
+    text-align:center;
+    margin:26px 0 20px;
+  }
   .badge{
-    display:inline-block; margin:6px 8px; padding:10px 14px; border-radius:14px;
-    background:var(--pill); color:#fff; font-weight:700; letter-spacing:.3px;
-    text-decoration:none; box-shadow:0 2px 6px rgba(0,0,0,.12);
+    display:inline-block;
+    margin:6px 8px;
+    padding:10px 14px;
+    border-radius:14px;
+    background:var(--pill);
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.3px;
+    text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
   }
   .badge.blue{ background:var(--accent);}
   .badge.gold{ background:var(--gold); color:#1f2328;}
@@ -38,27 +75,33 @@ permalink: "/"
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:32px;              
+    gap:32px;
     margin:20px 0 28px;
   }
   .logos img{
-    height:64px;          
-    width:auto;            
-    object-fit:contain;    
-    max-width:220px;       
-  }
-  @media (max-width:480px){
-    .logos img{ height:52px; }  
+    height:64px;
+    width:auto;
+    object-fit:contain;
+    max-width:220px;
   }
 
+ 
   img.hero{
-    max-width:420px;  
+    max-width:420px;
     width:100%;
     border-radius:10px;
     box-shadow:0 8px 24px rgba(0,0,0,.08);
   }
 
- 
+  
+  img.method-fig{
+    max-width:900px;
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+
+  
   .carousel{
     position:relative;
     overflow:hidden;
@@ -71,11 +114,28 @@ permalink: "/"
     display:flex;
     transition:transform .6s ease;
   }
-  .carousel img{
-    width:100%;
+  
+  .carousel-slide{
     flex:0 0 100%;
-    display:block;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:8px 0;
   }
+  .carousel-slide img{
+    display:block;
+    max-width:100%;  
+    height:auto;
+  }
+
+  
+  .result-img-small{
+    max-width:80%;   
+  }
+  .result-img-native{
+    max-width:100%;  
+  }
+
   .carousel-dots{
     text-align:center;
     margin-top:8px;
@@ -143,21 +203,23 @@ permalink: "/"
     </p>
   </div>
 
-  
   <div class="section">
     <h2>Overview of our FreqExit method</h2>
     <div class="center">
-      <img class="hero" src="Figures/method.png" alt="Overview of the FreqExit method">
+      <img class="method-fig" src="Figures/method.png" alt="Overview of the FreqExit method">
     </div>
   </div>
 
- 
   <div class="section">
     <h2>Main Results</h2>
     <div class="carousel" data-interval="5000">
       <div class="carousel-track">
-        <img src="Figures/exp_1.png" alt="Main results figure 1">
-        <img src="Figures/exp_2.png" alt="Main results figure 2">
+        <div class="carousel-slide">
+          <img src="Figures/exp_1.png" alt="Main results figure 1" class="result-img-small">
+        </div>
+        <div class="carousel-slide">
+          <img src="Figures/exp_2.png" alt="Main results figure 2" class="result-img-native">
+        </div>
       </div>
     </div>
     <div class="carousel-dots">
@@ -166,13 +228,16 @@ permalink: "/"
     </div>
   </div>
 
- 
   <div class="section">
     <h2>More Visualizations</h2>
     <div class="carousel" data-interval="5000">
       <div class="carousel-track">
-        <img src="Figures/supplementary_generation.png" alt="Additional FreqExit generation results">
-        <img src="Figures/supplementary_inpaint.png" alt="Additional FreqExit inpainting results">
+        <div class="carousel-slide">
+          <img src="Figures/supplementary_generation.png" alt="Additional FreqExit generation results">
+        </div>
+        <div class="carousel-slide">
+          <img src="Figures/supplementary_inpaint.png" alt="Additional FreqExit inpainting results">
+        </div>
       </div>
     </div>
     <div class="carousel-dots">
@@ -204,12 +269,11 @@ permalink: "/"
 
 </div> <!-- /wrap -->
 
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const carousels = document.querySelectorAll('.carousel');
 
-  carousels.forEach(function (carousel, idx) {
+  carousels.forEach(function (carousel) {
     const track = carousel.querySelector('.carousel-track');
     const slides = Array.from(track.children);
     const dotsContainer = carousel.parentElement.querySelector('.carousel-dots');
@@ -226,14 +290,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
-   
     dots.forEach(function (dot, i) {
       dot.addEventListener('click', function () {
         showSlide(i);
       });
     });
 
-    
     showSlide(0);
     setInterval(function () {
       showSlide(currentIndex + 1);
