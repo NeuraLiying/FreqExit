@@ -66,8 +66,8 @@ permalink: "/"
 
   <div class="authors">
     <a>Ying Li</a><sup>1</sup>,
-    <a>Chengfei Lv</a><sup>2</sup>,
-    <a>Huan Wang</a><sup>1</sup>
+    <a href="https://openreview.net/profile?id=~chengfei_lv1" target="_blank">Chengfei Lv</a><sup>2</sup>,
+    <a href="https://huanwang.tech/" target="_blank">Huan Wang</a><sup>1</sup>
   </div>
 
   <div class="affils">
